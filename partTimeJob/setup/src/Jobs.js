@@ -1,8 +1,19 @@
 import React from 'react';
-import data from './data';
 
-const Jobs = () => {
-  return <h2>Jobs component</h2>;
+const Jobs = ({ jobs }) => {
+  return (
+    <>
+      {jobs.map((item) => {
+        const { id, job, icon } = item;
+        return (
+          <article key={id} className="box-job">
+            <span>{icon}</span>
+            <h2>{job}</h2>
+          </article>
+        );
+      })}
+    </>
+  );
 };
 
 export default Jobs;
