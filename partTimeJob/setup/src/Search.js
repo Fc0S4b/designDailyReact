@@ -7,11 +7,11 @@ const Search = () => {
       <input
         type="text"
         className="input"
-        placeholder="Search for a part-time job"
+        placeholder="&#x1F50E;&#xFE0E; Search for a part-time job"
       />
       <button className="btn">
         <FaRegMap />
-        use map
+        <span>Use map</span>
       </button>
     </div>
   );
