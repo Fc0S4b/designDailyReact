@@ -23,12 +23,11 @@ function App() {
 
   useEffect(() => {
     fetchUsers();
-    
   }, []);
 
   if (loading) {
     return (
-      <section className="section loading">
+      <section className="section-loading">
         <h1>Loading...</h1>
       </section>
     );
@@ -36,8 +35,10 @@ function App() {
 
   return (
     <div className="container">
+      <div className="box-1"></div>
+      <div className="box-2"></div>
       <Profile person={person} />
-      <Content fetchUsers = {fetchUsers} />
+      <Content fetchUsers={fetchUsers} />
     </div>
   );
 }

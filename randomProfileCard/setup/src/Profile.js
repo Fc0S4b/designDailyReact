@@ -11,9 +11,11 @@ function Profile({ person }) {
   return (
     <div className="container-profile">
       <img src={`${large}`} className="img" alt="" />
-      <h1>{`${firstName}, ${lastName}`}</h1>
-      <FaMapMarkerAlt />
-      <h3>{`${streetName}, ${city}, ${country}`}</h3>
+      <h1>{`${firstName} ${lastName}`}</h1>
+      <h3>
+        <FaMapMarkerAlt />
+        {` ${streetName}, ${city}, ${country}`}
+      </h3>
     </div>
   );
 }

@@ -16,15 +16,21 @@ Global Styles
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background: #E5E5E5;
+  background: #C5C9DF;
   color: hsl(209, 61%, 16%);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 0.5rem;
   display: grid;
   place-items: center;
- 
 }
 
+.section-loading{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+}
 
 .container{
   background: #fff;
@@ -35,11 +41,16 @@ body {
   box-shadow: 0px 0px 26px -3px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
+  text-align: center;
+  text-transform: capitalize;
+  max-width: 300px;
+  margin: 10px;
+
 }
 
 .container::before{
   content: '';
-  background: #EFEBFD;
+  background: #141A41;
   position: absolute;
   width: 70%;
   height: 130%;
@@ -48,5 +59,75 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  max-width: 150px;
+
+}
+.box-1{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  border-radius: 100%;
+  z-index: 2;
+  background: rgb(94,255,197);
+background: radial-gradient(circle, rgb(176, 233, 212) 0%, rgba(255,255,255,1) 100%);
+
+}
+.box-2{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform: translateX(100%);
+  border-radius: 100%;
+  z-index: 2;
+ background: rgb(94,148,255);
+background: radial-gradient(circle, rgb(197, 212, 243) 0%, rgba(255,255,255,1) 100%);
+
 }
 
+.container-profile{
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  
+}
+
+.img{
+  width: 70px;
+  height: 70px;
+  margin: 30px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+.more-option{
+  position: absolute;
+  top: 7px;
+  right: 13px;
+  background: transparent;
+  border: transparent;
+}
+.btn{
+  display: block;
+  margin: 5px auto;
+  border-radius: 15px;
+  background: #141A41;
+  color:#fff;
+  width: 70px;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding: 3px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+.btn-container{
+  z-index: 3;
+}
+.btn:hover{
+  background: #26327d;
+
+}
+.random{
+  width: 60px;
+}
