@@ -1,19 +1,21 @@
-import React, {useState, useEffect} from 'react';
-const url = "https://randomuser.me/api/"
+import React from 'react';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
-function Profile() {
-  const [loading, setLoading] = useState(true);
-  const [person, setPerson] = useState(person);
+function Profile({ person }) {
+  const profileUser = person.results[0];
+  const { large } = profileUser.picture;
+  const { first: firstName, last: lastName } = profileUser.name;
+  const { name: streetName } = profileUser.location.street;
+  const { city, country } = profileUser.location;
 
-  const fetchUsers = async () => {
-    const response = await fetch(url);
-    const dataUser = await response.json()
-    setPerson(dataUser);
-    setLoading(false);
-  }
   return (
-    <div>Profile</div>
-  )
+    <div className="container-profile">
+      <img src={`${large}`} className="img" alt="" />
+      <h1>{`${firstName}, ${lastName}`}</h1>
+      <FaMapMarkerAlt />
+      <h3>{`${streetName}, ${city}, ${country}`}</h3>
+    </div>
+  );
 }
 
-export default Profile
+export default Profile;
